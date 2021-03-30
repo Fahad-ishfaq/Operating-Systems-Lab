@@ -93,7 +93,7 @@ void printDir()
 
 
   
-// System command is executed 
+// System commands 
 void execution(char** tokens) 
 { 
     char* filename;
