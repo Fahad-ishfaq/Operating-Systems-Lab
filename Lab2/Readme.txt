@@ -12,9 +12,6 @@
 #define MAX_TOKEN_SIZE 64
 #define MAX_NUM_TOKENS 64
 
-/* Splits the string by space and returns the array of tokens
-*
-*/
 char **tokenize(char *line)
 {
   char **tokens = (char **)malloc(MAX_NUM_TOKENS * sizeof(char *));
