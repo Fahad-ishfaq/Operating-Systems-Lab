@@ -150,7 +150,7 @@ void execution(char** tokens)
  	   			break;  
     			}
     			else if(tokens[i+2]){ //cant use space in filename 
-    				printf("\nShell: wrong filename");
+    				printf("\nShell: Wrong filename");
     				return;
     			}
   
@@ -165,7 +165,6 @@ void execution(char** tokens)
         exit(0); 
         
     } else { 
-        // waiting for child to terminate 
         wait(NULL);  
         return; 
     } 
@@ -199,7 +198,7 @@ int main(int argc, char* argv[]) {
 				break;	
 			}
 			line[strlen(line) - 1] = '\0';
-		} else { // interactive mode
+		} else { // User input interactive mode for one command at a time
 			printf("$ ");
 			scanf("%[^\n]", line);
 			getchar();
@@ -218,8 +217,8 @@ int main(int argc, char* argv[]) {
 			printf("%s\n", line);
 		}
 		
-		line[strlen(line)] = '\n'; //terminate as new line comes
-		strcpy(hist, line);
+		line[strlen(line)] = '\n'; 
+		strcpy(hist, line);//copying command to show as history
 		
 		if (line[strlen(line)-2] == '&'){
 			printf( "pid = %d" ,getpid());
