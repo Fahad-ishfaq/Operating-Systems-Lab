@@ -81,7 +81,7 @@ char **multi_tokenize(char *line)
 
 
   
-// Printing Current Directory Using ls command. 
+// Printing Current Directory. 
 void printDir() 
 { 
     char cwd[1024]; 
